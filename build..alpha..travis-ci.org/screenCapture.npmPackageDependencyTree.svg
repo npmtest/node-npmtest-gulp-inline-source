@@ -50,7 +50,7 @@
 <tspan x="10" y="762">  │ └─┬ vinyl@0.5.3 </tspan>
 <tspan x="10" y="778">  │   ├── clone@1.0.2 </tspan>
 <tspan x="10" y="794">  │   └── clone-stats@0.0.1 </tspan>
-<tspan x="10" y="810">  ├─┬ inline-source@5.2.1 </tspan>
+<tspan x="10" y="810">  ├─┬ inline-source@5.2.2 </tspan>
 <tspan x="10" y="826">  │ ├─┬ csso@3.0.1 </tspan>
 <tspan x="10" y="842">  │ │ └── css-tree@1.0.0-alpha17 </tspan>
 <tspan x="10" y="858">  │ ├─┬ htmlparser2@3.9.2 </tspan>

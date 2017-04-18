@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-gulp-inline-source/gulp-inline-source/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-gulp-inline-source/node_modules/gulp-inline-source/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-gulp-inline-source">npmtest-gulp-inline-source (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-inline-source/gulp-inline-source/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-inline-source/node_modules/gulp-inline-source/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">17.39% <small>(4 / 23)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-inline-source/gulp-inline-source/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-inline-source/node_modules/gulp-inline-source/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -323,55 +321,56 @@
 &nbsp;
 const PLUGIN_NAME = 'gulp-inline-source';
 &nbsp;
-<span class="fstat-no" title="function not covered" >function gulpInlineSource (options) {</span>
+<span class="fstat-no" title="function not covered">function gulpInlineSource (options) {</span>
     'use strict';
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var stream = through.obj(<span class="fstat-no" title="function not covered" >function (file, enc, cb) {</span></span>
-<span class="cstat-no" title="statement not covered" >        var self = this;</span>
+<span class="cstat-no" title="statement not covered">    var stream = through.obj(<span class="fstat-no" title="function not covered">function (file, enc, cb) {</span></span>
+<span class="cstat-no" title="statement not covered">        var self = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (file.isNull() || file.isDirectory()) {</span>
-<span class="cstat-no" title="statement not covered" >            this.push(file);</span>
-<span class="cstat-no" title="statement not covered" >            return cb();</span>
+<span class="cstat-no" title="statement not covered">        if (file.isNull() || file.isDirectory()) {</span>
+<span class="cstat-no" title="statement not covered">            this.push(file);</span>
+<span class="cstat-no" title="statement not covered">            return cb();</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (file.isStream()) {</span>
-<span class="cstat-no" title="statement not covered" >            this.emit('error', new gutil.PluginError(PLUGIN_NAME, 'Streaming not supported'));</span>
-<span class="cstat-no" title="statement not covered" >            return cb();</span>
+<span class="cstat-no" title="statement not covered">        if (file.isStream()) {</span>
+<span class="cstat-no" title="statement not covered">            this.emit('error', new gutil.PluginError(PLUGIN_NAME, 'Streaming not supported'));</span>
+<span class="cstat-no" title="statement not covered">            return cb();</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        var fileOptions = {</span>
+<span class="cstat-no" title="statement not covered">        var fileOptions = {</span>
           rootpath: path.dirname(file.path),
           htmlpath: file.path
         };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (options) {</span>
-<span class="cstat-no" title="statement not covered" >          for (var i in options) {</span>
-<span class="cstat-no" title="statement not covered" >            fileOptions[i] = options[i];</span>
+<span class="cstat-no" title="statement not covered">        if (options) {</span>
+<span class="cstat-no" title="statement not covered">          for (var i in options) {</span>
+<span class="cstat-no" title="statement not covered">            fileOptions[i] = options[i];</span>
           }
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        inlineSource(file.contents.toString(), fileOptions, <span class="fstat-no" title="function not covered" >function (err, html) {</span></span>
-<span class="cstat-no" title="statement not covered" >            if (err) {</span>
-<span class="cstat-no" title="statement not covered" >                self.emit('error', new gutil.PluginError(PLUGIN_NAME, err));</span>
+<span class="cstat-no" title="statement not covered">        inlineSource(file.contents.toString(), fileOptions, <span class="fstat-no" title="function not covered">function (err, html) {</span></span>
+<span class="cstat-no" title="statement not covered">            if (err) {</span>
+<span class="cstat-no" title="statement not covered">                self.emit('error', new gutil.PluginError(PLUGIN_NAME, err));</span>
             } else {
-<span class="cstat-no" title="statement not covered" >                file.contents = new Buffer(html || '');</span>
-<span class="cstat-no" title="statement not covered" >                self.push(file);</span>
+<span class="cstat-no" title="statement not covered">                file.contents = new Buffer(html || '');</span>
+<span class="cstat-no" title="statement not covered">                self.push(file);</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            cb();</span>
+<span class="cstat-no" title="statement not covered">            cb();</span>
         });
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return stream;</span>
+<span class="cstat-no" title="statement not covered">    return stream;</span>
 }
 &nbsp;
 module.exports = gulpInlineSource;
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 12 2017 00:42:16 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 17:42:17 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
